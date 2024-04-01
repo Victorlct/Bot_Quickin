@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações da Vaga</title>
+</head>
+<body>
+    <h1>Informações da Vaga</h1>
+    <h2>Nome:</h2>
+    <p>{{ nome }}</p>
+    <h2>Local:</h2>
+    <p>{{ local }}</p>
+    <h2>Salário Máximo:</h2>
+    <p>{{ salario_maximo }}</p>
+    <h2>Salário Mínimo:</h2>
+    <p>{{ salario_minimo }}</p>
+    <h2>Outras Informações:</h2>
+    <p>{{ outras_informacoes }}</p>
+    
+    <h2>Selecione um Stage:</h2>
+    <select name="stages" id="stages">
+        {% for option in options_stages %}
+            <option value="{{ option[0] }}">{{ option[1] }}</option>
+        {% endfor %}
+    </select>
+</body>
+</html>
